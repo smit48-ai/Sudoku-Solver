@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+}
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    /* border: 2px solid black; */
+}
+.flex-col{
+    margin: auto;
+    /* width: 50%; */
+}
+input{
+    width: 10%;
+    height: 30px;
+    padding: 0;
+   
+}
+#header{
+    text-align: center;
+    color: white;
+    padding: 0%; 
+    background-color: black;
+    font-family: 'Short Stack', cursive;
+    font-size: 300%;
+}
+h1{
+    margin: 0%;
+}
+#mid{
+    padding: 5%;
+}
+
+.sudoko{
+    width: 286px;
+    height:286px;
+    /* border-spacing: 0px; */
+    border-collapse: collapse;
+}
+
+.cell{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 2px solid grey;
+}
+.cells{
+    border-bottom: 2px solid black;
+}
+.cells2{
+    border-right:2px solid black;
+}
+.cell_selected{
+    border: 3px solid black;
+}
+.edit_text{
+  text-align: center;
+  font-size: 100%;
+  border: 0;
+  width: 100%;
+}
+
+.button_edit{
+    font-size: 1.5rem;
+    margin-top: 15%;
+    margin-right: 5%;
+    color: white;
+    background-color: black;
+    border-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 1%;
+    border-radius: 10%;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+    border-color: black;
+}
