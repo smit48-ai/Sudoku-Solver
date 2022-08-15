@@ -1,29 +1,37 @@
 body{
     margin: 0;
+    background-image: linear-gradient(to right top, #c43214, #a5003a, #730049, #3a0f44, #07072c);
+    background-size: cover;
+    height: 100vh;
 }
+
 .flex-container{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     /* justify-content: space-around; */
     /* border: 2px solid black; */
 }
+
 .flex-col{
     margin: auto;
-    /* width: 50%; */
 }
 input{
-    width: 10%;
-    height: 30px;
+    width: 100%;
+    height: 100%;
     padding: 0;
    
 }
 #header{
     text-align: center;
-    color: white;
+    color: RGB(173,98,66);
     padding: 0%; 
-    background-color: black;
     font-family: 'Short Stack', cursive;
-    font-size: 300%;
+    position: relative;
+    font-size: 4rem;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color:  brown;
 }
 h1{
     margin: 0%;
@@ -33,30 +41,32 @@ h1{
 }
 
 .sudoko{
-    width: 286px;
-    height:286px;
-    /* border-spacing: 0px; */
     border-collapse: collapse;
+    border: 0px;
+    position: relative;
 }
 
 .cell{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     text-align: center;
-    border: 2px solid grey;
 }
+
 .cells{
-    border-bottom: 2px solid black;
+    border-bottom: 3px solid transparent;
 }
+
 .cells2{
-    border-right:2px solid black;
+    border-right:3px solid transparent;
 }
+
 .cell_selected{
-    border: 3px solid black;
+    border: 3px solid transparent;
 }
+
 .edit_text{
   text-align: center;
-  font-size: 100%;
+  font-size: 1.5rem;
   border: 0;
   width: 100%;
 }
@@ -71,10 +81,77 @@ h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border: 1%;
     border-radius: 10%;
+    position: relative;
+}
+
+.edit_range{
+    margin-top: 70px;
+    z-index: 1;
+    position: relative;
+    display: inline-block;
 }
 
 button:hover{
     background-color: white;
     color: black;
     border-color: black;
+}
+
+input[type=text]{
+    border-radius: 10px;
+    outline: none;
+}
+
+#canvas{
+    position: absolute;
+}
+#dialogpage{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+}
+
+.dialogbox{
+    margin: 15% auto;
+    width: 50%;
+    position: relative;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #07072c;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding:10px;
+    animation: animatedialogbox 2s;
+}
+@keyframes animatedialogbox {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+    
+}
+.content{
+    display: flex;
+    align-content: center;
+    margin: auto;
+}
+.closebutton{
+    display: block;
+    margin:10px auto;
+    width: 50px;
+    height: 50px;
+}
+.spaceship{
+    width: 100px;
+    height: 100px;;
+}
+.error{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 4rem;;
+}
+.functionalities{
+    margin-right: 100px;
 }

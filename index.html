@@ -18,24 +18,30 @@
 
     <title>Sudoku solver</title>
   </head>
-  <body>
+  <body>  
+    <div class="back">
+      <canvas id="canvas"></canvas>
+    </div> 
+    <div id="dialogpage">
+      <div class="dialogbox">
+        <a href=""><img src="assets/close.png" class="closebutton"></a>
+        <div class="content">
+          <img src="assets/spaceship.png" class="spaceship" >
+          <h1 class="error">Invalid Sudoku</h1>
+        </div>
+      </div>
+    </div>
+   
+    
+    <section id="maincontent">
     <section id="header">
       <div>
         <h1>SUDOKU SOLVER</h1>
       </div>
     </section>
     <section id="mid">
+    
       <div class="flex-container">
-        <div class="flex-col">
-          <h2>Steps</h2>
-          <ul>
-            <li>Enter the sudoko puzzle</li>
-            <li>
-              Press the submit button below the puzzle
-            </li>
-            <li>press clear button to clear the whole sudoko</li>
-          </ul>
-        </div>
         <div class="flex-col">
           <form onsubmit="return false">
             <table class="sudoko">
@@ -203,13 +209,20 @@
                 <td class="cell"><input type="text" class="edit_text" /></td>
               </tr>
             </table>
-            <button class="button_edit" type="reset">clear</button>
-            <button class="button_edit" type="submit" class="sub">submit</button>
           </form>
+        </div>
+        <div class="functionalities">
+          <input type="range" class="edit_range">
+          <button class="button_edit" type="reset">clear</button>
+          <button class="button_edit" type="submit" class="sub">submit</button>
         </div>
       </div>
     </section>
     <section id="footer"></section>
-    <script src="script.js"></script>
+    </section>
+
+    <script src="script.js" ></script>
+    <!-- <script src="canvas.js"></script> -->
+   
   </body>
 </html>
